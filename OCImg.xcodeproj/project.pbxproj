@@ -6,8 +6,19 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DF472E3D199DE70600018DE5 /* OCImg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF472E39199DE70600018DE5 /* OCImg.cpp */; };
+		DF472E3E199DE70600018DE5 /* OCImg.h in Headers */ = {isa = PBXBuildFile; fileRef = DF472E3A199DE70600018DE5 /* OCImg.h */; };
+		DF472E3F199DE70600018DE5 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF472E3B199DE70600018DE5 /* Utils.cpp */; };
+		DF472E40199DE70600018DE5 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = DF472E3C199DE70600018DE5 /* Utils.h */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DF472E31199DE6EE00018DE5 /* libOCImg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOCImg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF472E39199DE70600018DE5 /* OCImg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCImg.cpp; sourceTree = "<group>"; };
+		DF472E3A199DE70600018DE5 /* OCImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCImg.h; sourceTree = "<group>"; };
+		DF472E3B199DE70600018DE5 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		DF472E3C199DE70600018DE5 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +35,7 @@
 		DF472E28199DE6EE00018DE5 = {
 			isa = PBXGroup;
 			children = (
+				DF472E38199DE70600018DE5 /* OCImg */,
 				DF472E32199DE6EE00018DE5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -36,6 +48,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DF472E38199DE70600018DE5 /* OCImg */ = {
+			isa = PBXGroup;
+			children = (
+				DF472E39199DE70600018DE5 /* OCImg.cpp */,
+				DF472E3A199DE70600018DE5 /* OCImg.h */,
+				DF472E3B199DE70600018DE5 /* Utils.cpp */,
+				DF472E3C199DE70600018DE5 /* Utils.h */,
+			);
+			path = OCImg;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -43,6 +66,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF472E40199DE70600018DE5 /* Utils.h in Headers */,
+				DF472E3E199DE70600018DE5 /* OCImg.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF472E3D199DE70600018DE5 /* OCImg.cpp in Sources */,
+				DF472E3F199DE70600018DE5 /* Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +204,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -185,6 +217,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
